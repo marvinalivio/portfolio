@@ -2,13 +2,28 @@
 
 /* Mobile */
 @media screen and (max-width:768px) {
-    .barSkillsContainer {
-        grid-template-columns: repeat(1, 100%);
+    .barSkillsContainer, section#Project, .sectionClass {
+        display: block !important;
+    }
+    section#aboutMe article {
+        width: 100% !important;
+    }
+    figure {
+        margin: 20px auto !important;
+        position: relative;
+    }
+}
+
+@media screen and (min-width:960px) and (max-height:768px) {
+    section#me img {
+        max-width: 310px;
     }
 }
 
 /* Desktop */
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
     transition: .2s;
@@ -116,7 +131,7 @@ section#me img {
     width: auto;
     height: auto;
     max-width: 80px;
-    mix-blend-mode: luminosity;
+    filter: grayscale(.8);
 }
 section#aboutMe {
     display: flex;
@@ -155,4 +170,54 @@ aside > div {
     display: grid;
     grid-template-columns: repeat(2, 47%);
     justify-content: space-between;
+}
+section#Project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+section#Project h2 {
+    grid-area: 1 / span 3;
+}
+section#Project img {
+    width: 100%;
+    filter: grayscale(.6);
+    opacity: .7;
+}
+figure {
+    margin: 0;
+    position: relative;
+}
+figcaption {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
+figcaption a {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    display: block;
+    opacity: .7;
+    filter: grayscale(.7);
+}
+figcaption a:before {
+    content: '';
+    background-color: #f5f5f5 !important;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.gitLabicons:before {
+    background: url(../images/git.svg)no-repeat center center / 80%;
+}
+.demoIcons:before {
+    background: url(../images/play-295.svg)no-repeat center center / 100%;
 }
