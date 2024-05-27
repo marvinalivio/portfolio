@@ -87,7 +87,7 @@ section#me {
     height: calc(100vh - 239px);
 }
 section#me img {
-    width: 100%;
+    width: auto;
     max-width: 295px;
 }
 .fullBleed {
