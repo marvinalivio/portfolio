@@ -294,6 +294,9 @@ figcaption a {
     opacity: .7;
     filter: grayscale(.7);
 }
+figcaption a:hover {
+    filter: grayscale(0);
+}
 figcaption a:before {
     content: '';
     background-color: #f5f5f5 !important;
