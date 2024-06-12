@@ -15,7 +15,7 @@ window.addEventListener('scroll', function() {
     let getAnimate = document.getElementsByClassName('animate'); 
     for (let i = 0; i < getAnimate.length; i++){
         let bounding = getAnimate[i].getBoundingClientRect();
-        if (bounding.top <= 100 && bounding.top <= (window.innerHeight || document.documentElement.clientHeight)){
+        if (bounding.top <= 200 && bounding.top <= (window.innerHeight || document.documentElement.clientHeight)){
             getAnimate[i].classList.add('letsAnimate');
             getAnimate[i].classList.remove('firstAnimate');
         }
