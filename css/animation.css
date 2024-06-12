@@ -1,8 +1,8 @@
 .firstAnimate .slide-in-left{
-    transform: translateX(-1000px);
+    transform: translateX(-2000px);
 }
 .firstAnimate .slide-in-right{
-    transform: translateX(1000px);
+    transform: translateX(2000px);
 }
 .letsAnimate .slide-in-left {
 	-webkit-animation: slide-in-left 0.8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
