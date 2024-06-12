@@ -11,22 +11,21 @@ window.addEventListener('scroll', function() {
         
 }); 
 
-let animateClass = document.getElementById('aboutMe');
-
-window.onscroll = function(){
-    getAnimate(animateClass);
-}
-
-function getAnimate(animateClass){
-    
-    if (window.scrollY === 0 && animateClass === window.scrollY){
-        animateClass.classList.add("goAnimate")
+window.addEventListener('scroll', function() {
+    let getAnimate = document.getElementsByClassName('animate'); 
+    for (let i = 0; i < getAnimate.length; i++){
+        let bounding = getAnimate[i].getBoundingClientRect();
+        if (bounding.top <= 100 && bounding.top <= (window.innerHeight || document.documentElement.clientHeight)){
+            getAnimate[i].classList.add('letsAnimate');
+            getAnimate[i].classList.remove('firstAnimate');
+        }
+        else{
+            // getAnimate[i].classList.remove('letsAnimate');
+            
+        }
+        console.log(bounding)
     }
-    else {
-        animateClass.classList.remove("goAnimate")
-    }
-}
-
+})
 
 let menu = document.getElementById("menu");
 let closeNav = document.getElementById("closeNav");
