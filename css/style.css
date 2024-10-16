@@ -206,6 +206,11 @@ section.project img {
 figure {
     margin: 0;
     position: relative;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    border: 3px solid #fff;
+    outline: 1px solid #ccc;
 }
 figcaption {
     display: flex;
